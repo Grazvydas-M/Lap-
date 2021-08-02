@@ -67,6 +67,49 @@ if($b < $a && $a < $c || $c < $a && $a < $b){
 echo '<br>';echo '<br>';
 
 /*
+$number1 = rand(0, 25);
+
+$number2 = rand(0, 25);
+
+$number3 = rand(0, 25);
+
+
+
+echo "$number1 : $number2 : $number3 <br>";
+
+
+
+if ($number1 > $number3 && $number1 < $number2 ||
+
+    $number1 < $number3 && $number1 > $number2) 
+
+echo "$number1";
+
+
+
+elseif ($number2 > $number3 && $number2 < $number1 ||
+
+        $number2 < $number3 && $number2 > $number1)
+
+echo "$number2";
+
+
+
+elseif ($number3 > $number2 && $number3 < $number1 ||
+
+        $number3 < $number2 && $number3 > $number1)
+
+echo "$number3";
+
+else {
+
+    echo 'two numbers are even';
+
+}
+*/
+
+
+/*
 4. Įvedami skaičiai -a, b, c –kraštinių ilgiai, trys kintamieji (naudokite ​rand()​ funkcija nuo 1 iki 10). 
 Parašykite PHP programą, kuri nustatytų, ar galima sudaryti trikampį ir atsakymą atspausdintų. 
 */
@@ -142,6 +185,66 @@ echo 'Dvejetų kiekis: '.$dvejetuSK;
 echo '<br>';echo '<br>';
 
 /*
+Marijaus sprendimas
+$var1 = rand(0, 2);
+
+$var2 = rand(0, 2);
+
+$var3 = rand(0, 2);
+
+$var4 = rand(0, 2);
+
+$zeroes = 0;
+
+$ones = 0;
+
+$twos = 0;
+
+$check1 = match ($var1) {
+
+    0 => $zeroes++,
+
+    1 => $ones++,
+
+    2 => $twos++,
+
+};
+
+$check2 = match ($var2) {
+
+    0 => $zeroes++,
+
+    1 => $ones++,
+
+    2 => $twos++,
+
+};
+
+$check3 = match ($var3) {
+
+    0 => $zeroes++,
+
+    1 => $ones++,
+
+    2 => $twos++,
+
+};
+
+$check4 = match ($var4) {
+
+    0 => $zeroes++,
+
+    1 => $ones++,
+
+    2 => $twos++,
+
+};
+
+echo "'0' count is $zeroes<br> '1' count is $ones <br> '2' count is $twos";
+
+*/
+
+/*
 6. Naudokite funkcija rand(). 
 Sugeneruokite atsitiktinį skaičių nuo 1 iki 6 ir jį atspausdinkite atitinkame h tage. Pvz skaičius 3- rezultatas: <h3>3</h3>
 */
@@ -193,6 +296,31 @@ if($treciasSK < 0){
 echo '<p style="color:'.$color1.';">'.'trečias skaičius: '.$treciasSK.'</p>';
 
 echo '<br>';
+
+/*
+Marijaus sprendimas:
+$var1 = rand(-10, 10);
+
+$var2 = rand(-10, 10);
+
+$var3 = rand(-10, 10);
+
+
+
+$color1 = ($var1 < 0) ? 'green' : (($var1 > 0) ? 'blue' : 'red');
+
+$color2 = ($var2 < 0) ? 'green' : (($var2 > 0) ? 'blue' : 'red');
+
+$color3 = ($var3 < 0) ? 'green' : (($var3 > 0) ? 'blue' : 'red');
+
+
+
+echo "<h2 style=\"color:$color1;display:inline-block;padding-right:20px;\">$var1</h2>";
+
+echo "<h2 style=\"color:$color2;display:inline-block;padding-right:20px;\">$var2</h2>";
+
+echo "<h2 style=\"color:$color3;display:inline-block;padding-right:20px;\">$var3</h2>";
+*/
 
 /*
 8. Įmonė parduoda žvakes po 1 EUR. Perkant daugiau kaip už 1000 EUR taikoma 3 % nuolaida, daugiau kaip už 2000 EUR - 4 % nuolaida. 
@@ -374,3 +502,91 @@ if(($numbSix > $numbTwo && $numbSix > $numbThree && $numbSix > $numbFour && $num
 
 
 echo $first . ' ' . $second . ' ' . $third;
+
+/*
+Marijaus 12 uzd sprendimas.
+
+$var1 = rand(1000, 9999);
+$var2 = rand(1000, 9999);
+$var3 = rand(1000, 9999);
+$var4 = rand(1000, 9999);
+$var5 = rand(1000, 9999);
+$var6 = rand(1000, 9999);
+echo "$var1, $var2, $var3, $var4, $var5, $var6 <br>";
+if ($var1 < $var2) {
+    $temp = $var1;
+    $var1 = $var2;
+    $var2 = $temp;
+}
+if ($var2 < $var3) {
+    $temp = $var2;
+    $var2 = $var3;
+    $var3 = $temp;
+}
+if ($var3 < $var4) {
+    $temp = $var3;
+    $var3 = $var4;
+    $var4 = $temp;
+}
+if ($var4 < $var5) {
+    $temp = $var4;
+    $var4 = $var5;
+    $var5 = $temp;
+}
+if ($var5 < $var6) {
+    $temp = $var5;
+    $var5 = $var6;
+    $var6 = $temp;
+}
+if ($var1 < $var2) {
+    $temp = $var1;
+    $var1 = $var2;
+    $var2 = $temp;
+}
+if ($var2 < $var3) {
+    $temp = $var2;
+    $var2 = $var3;
+    $var3 = $temp;
+}
+if ($var3 < $var4) {
+    $temp = $var3;
+    $var3 = $var4;
+    $var4 = $temp;
+}
+if ($var4 < $var5) {
+    $temp = $var4;
+    $var4 = $var5;
+    $var5 = $temp;
+}
+if ($var1 < $var2) {
+    $temp = $var1;
+    $var1 = $var2;
+    $var2 = $temp;
+}
+if ($var2 < $var3) {
+    $temp = $var2;
+    $var2 = $var3;
+    $var3 = $temp;
+}
+if ($var3 < $var4) {
+    $temp = $var3;
+    $var3 = $var4;
+    $var4 = $temp;
+}
+if ($var1 < $var2) {
+    $temp = $var1;
+    $var1 = $var2;
+    $var2 = $temp;
+}
+if ($var2 < $var3) {
+    $temp = $var2;
+    $var2 = $var3;
+    $var3 = $temp;
+}
+if ($var1 < $var2) {
+    $temp = $var1;
+    $var1 = $var2;
+    $var2 = $temp;
+}
+echo "$var1, $var2, $var3, $var4, $var5, $var6 <br>";
+*/
