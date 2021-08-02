@@ -46,6 +46,14 @@ foreach ($array as $key => $value) {
 
 
 foreach ($array as $key => $value) {
-    if (count($value))
-        die;
+    $startAt = count($value);
+    // var_dump($value, $startAt, range($startAt, 10));
+    // die();
+    foreach (range($startAt, 9) as $itemKey => $item) {
+        //  var_dump($itemKey, $item);
+        //  die();
+        $array[$key][$item] = 'C';
+        // $value[$key] = 'C';
+    }
 }
+print_r($array);

@@ -132,7 +132,7 @@ foreach (range(0, 9) as $key) {
 }
 
 echo '<pre>';
-// print_r($lettersArr);
+print_r($lettersArr);
 echo '<br>';
 
 
@@ -169,6 +169,7 @@ print_r($lettersArr);
 
 // 5. Sukurkite masyvą iš 30 elementų. Kiekvienas masyvo elementas yra masyvas [user_id => xxx, place_in_row => xxx] user_id atsitiktinis 
 // unikalus skaičius nuo 1 iki 1000000, place_in_row atsitiktinis skaičius nuo 0 iki 100. 
+echo '5.  <br>';
 
 $usersArr = [];
 
@@ -178,15 +179,27 @@ for ($i = 0; $i < 30; $i++) {
 }
 
 echo '<pre>';
-print_r($usersArr);
-
-
-
-
-
+// print_r($usersArr);
 
 
 // 6. Išrūšiuokite 5 uždavinio masyvą pagal user_id didėjančia tvarka. Ir paskui išrūšiuokite pagal place_in_row mažėjančia tvarka.
+echo '6.  <br>';
+
+sort($usersArr);
+// print_r($usersArr);
+
+// sortas rusiuoja tik pagal pirma elementa
+
+
+usort($usersArr, function ($a, $b) {
+    return $a['place_in_row'] <=> $b['place_in_row'];
+});
+print_r($usersArr);
+
+// 7. Prie 6 uždavinio masyvo antro lygio masyvų pridėkite dar du elementus: name ir surname. 
+// Elementus užpildykite stringais iš atsitiktinai sugeneruotų lotyniškų raidžių, kurių ilgiai nuo 5 iki 15.
+
+echo '7.  <br>';
 
 
 
@@ -197,9 +210,8 @@ print_r($usersArr);
 
 
 
-
-
-
+echo '<br>';
+echo '<br>';
 
 
 // cw
