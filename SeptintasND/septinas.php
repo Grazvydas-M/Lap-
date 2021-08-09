@@ -1,15 +1,19 @@
-<!-- Padarykite puslapį su dviem mygtukais. Mygtukus įdėkite į dvi skairtingas formas- vieną GET ir kitą POST. 
-Nenaudodami jokių konkrečių $_GET ar $_POST reikšmių, nuspalvinkite foną žaliai, kai paspaustas mygtukas iš GET formos ir 
-geltonai- kai iš POST. -->
+<!-- Pakartokite 6 uždavinį. Papildykite jį kodu, kuris naršyklę po POST metodo peradresuotų tuo pačiu adresu (t.y. į patį save)
+ jau GET metodu. -->
 
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $color = 'yellow';
+    header('location: https://localhost/lape/SeptintasND/septinas.php?color=yellow');
+    exit();
 }
 
 if (isset($_GET['color']) && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $color = 'green';
+    if ($_GET['color'] == 'yellow') {
+        $color = 'yellow';
+    }
 }
 
 
@@ -30,7 +34,7 @@ body {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sestas</title>
+    <title>Septintas</title>
 </head>
 
 <body>
