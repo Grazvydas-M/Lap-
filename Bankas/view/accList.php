@@ -2,7 +2,7 @@
     require __DIR__ . '/main.php';
     ?>
 
-   <p>Acc list</p>
+   <p>Saskaitu sarasas</p>
 
    <style>
 input {

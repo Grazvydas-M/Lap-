@@ -1,7 +1,7 @@
    <?php
     require __DIR__ . '/main.php';
     ?>
-   <p>Add account</p>
+   <p>Sukurti nauja saskaita</p>
    <form action="https://localhost/lape/Bankas/index.php?route=create" method="POST">
        <label>Vardas:</label><input type="text" name="Vardas">
        <label>Pavarde:</label><input type="text" name="Pavarde">
